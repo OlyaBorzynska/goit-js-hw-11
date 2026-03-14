@@ -112,10 +112,6 @@ main:has(.back-link) {
   background-color: #6c8cff;
 }
 
-/* .loader {
-  margin-top: 24px;
-} */
-
 .loader {
   width: 48px;
   height: 48px;
@@ -151,10 +147,11 @@ main:has(.back-link) {
 
 .gallery-link {
   border: 1px solid #808080;
+  display: block;
 }
 
 .gallery-image {
-  /* display: block; */
+  display: block;
   overflow: hidden;
   width: 360px;
   max-height: 80%;

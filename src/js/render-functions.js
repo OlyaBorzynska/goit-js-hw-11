@@ -11,7 +11,7 @@ let simpleGallery = new SimpleLightbox('.gallery a', {
 });
 
 function imageTemplate(image) {
-  return `<a class="gallery-link" href="${image.largeImageURL}">
+  return `<li><a class="gallery-link" href="${image.largeImageURL}">
         <img class="gallery-image" src="${image.webformatURL}" alt="${image.tags}" />
         <div class="small-container">
           <p class="gallery-text">
@@ -27,7 +27,8 @@ function imageTemplate(image) {
             <span class="small-title-gallery">Downloads</span><br>${image.downloads}
           </p>
         </div>
-      </a>`;
+      </a>
+      </li>`;
 }
 
 function imagesTemplate(images) {
