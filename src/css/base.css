@@ -153,8 +153,8 @@ main:has(.back-link) {
 .gallery-image {
   display: block;
   overflow: hidden;
-  width: 360px;
-  max-height: 80%;
+  width: 340px;
+  height: 200px;
 }
 
 .small-container {
@@ -171,6 +171,7 @@ main:has(.back-link) {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #2e2f42;
+  text-align: center;
 }
 
 .small-title-gallery {

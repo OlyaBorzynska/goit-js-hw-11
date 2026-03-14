@@ -37,11 +37,9 @@ form.addEventListener('submit', e => {
             message: `Sorry, there are no images matching 
             your search query. <br> Please try again!`,
           });
-          hideLoader();
         } else {
           createGallery(result.hits);
           form.reset();
-          hideLoader();
         }
       })
       .catch(error => {
@@ -51,7 +49,7 @@ form.addEventListener('submit', e => {
           backgroundColor: 'red',
           message: `ERROR: ${error}`,
         });
-        hideLoader();
-      });
+      })
+      .finally(() => hideLoader());
   }
 });
