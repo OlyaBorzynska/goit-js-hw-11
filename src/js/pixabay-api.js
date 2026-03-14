@@ -19,5 +19,5 @@ export async function getImagesByQuery(query) {
     safesearch: true,
   };
 
-  return axios.get(url, { params });
+  return await axios.get(url, { params }).then(response => response.data);
 }

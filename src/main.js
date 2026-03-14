@@ -28,8 +28,8 @@ form.addEventListener('submit', e => {
   } else {
     showLoader();
     getImagesByQuery(textImage.trim())
-      .then(response => {
-        if (response.data.hits.length === 0) {
+      .then(result => {
+        if (result.hits.length === 0) {
           iziToast.error({
             theme: 'dark',
             position: 'topRight',
@@ -37,8 +37,9 @@ form.addEventListener('submit', e => {
             message: `Sorry, there are no images matching 
             your search query. <br> Please try again!`,
           });
+          hideLoader();
         } else {
-          const markup = createGallery(response.data.hits);
+          createGallery(result.hits);
           form.reset();
           hideLoader();
         }
@@ -50,6 +51,7 @@ form.addEventListener('submit', e => {
           backgroundColor: 'red',
           message: `ERROR: ${error}`,
         });
+        hideLoader();
       });
   }
 });
